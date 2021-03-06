@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foo_bar/screens/auth/decoration_function.dart';
+import 'package:foo_bar/screens/auth/sign_in_up_bar.dart';
 import 'package:foo_bar/screens/auth/title.dart';
 import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 
@@ -34,7 +35,12 @@ class SignIn extends StatelessWidget {
                     child: PasswordTextFormField(
                       decoration: signInInputDecoration(),
                     ),
-                  )
+                  ),
+                  SignInBar(
+                    isLoading: true,
+                    label: 'Sign In',
+                    onPressed: () {},
+                  ),
                 ],
               ),
             ),
