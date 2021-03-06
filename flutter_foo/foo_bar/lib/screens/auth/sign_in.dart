@@ -27,13 +27,13 @@ class SignIn extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16),
                     child: EmailTextFormField(
-                      decoration: signInInputDecoration(),
+                      decoration: signInInputDecoration(hintText: 'Email'),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16),
                     child: PasswordTextFormField(
-                      decoration: signInInputDecoration(),
+                      decoration: signInInputDecoration(hintText: 'Password'),
                     ),
                   ),
                   SignInBar(
