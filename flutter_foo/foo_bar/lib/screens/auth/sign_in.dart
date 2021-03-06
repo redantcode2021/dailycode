@@ -38,7 +38,7 @@ class SignIn extends StatelessWidget {
                   ),
                   SignInBar(
                     isLoading: true,
-                    label: 'Sign In',
+                    label: 'Sign in',
                     onPressed: () {},
                   ),
                 ],

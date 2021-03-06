@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-Added import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'config/palette.dart';
