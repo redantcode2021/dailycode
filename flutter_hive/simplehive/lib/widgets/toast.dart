@@ -8,6 +8,7 @@ void toastWidget(msg) {
     gravity: ToastGravity.CENTER,
     backgroundColor: Colors.red,
     textColor: Colors.white,
+    timeInSecForIosWeb: 2,
     fontSize: 16.0,
   );
 }
