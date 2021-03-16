@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simplehive/associate_data.dart';
 import 'package:simplehive/model/associate.dart';
+import 'package:simplehive/pages/associate_view_page.dart';
 
 class AssociateTile extends StatelessWidget {
   const AssociateTile({Key key, this.titleIndex}) : super(key: key);
@@ -42,7 +43,7 @@ class AssociateTile extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) {
-                //return AssociateView();
+                return AssociateView();
               }),
             );
           },
