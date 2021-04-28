@@ -34,12 +34,31 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (BuildContext context) => _counterBloc,
+      child: CounterWidget(
+        widget: widget,
+      ),
+    );
+  }
+}
+
+class CounterWidget extends StatelessWidget {
+  const CounterWidget({
+    Key? key,
+    required this.widget,
+  }) : super(key: key);
+
+  final MyHomePage widget;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: BlocBuilder(
-        bloc: _counterBloc,
+        bloc: BlocProvider.of<CounterBloc>(context),
         builder: (BuildContext context, int state) {
           return Center(
             child: Column(
@@ -58,14 +77,20 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () => _counterBloc.add(IncrementEvent()),
+            onPressed: () =>
+                BlocProvider.of<CounterBloc>(context).add(IncrementEvent()),
             tooltip: 'Increment',
             child: Icon(Icons.add),
           ),
+          SizedBox(
+            width: 10,
+          ),
           FloatingActionButton(
-            onPressed: () => _counterBloc.add(DecrementEvent()),
+            onPressed: () =>
+                BlocProvider.of<CounterBloc>(context).add(DecrementEvent()),
             tooltip: 'Decrement',
             child: Icon(Icons.remove),
           ),
